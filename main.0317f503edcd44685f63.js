@@ -1,0 +1,1 @@
+webpackJsonp([0],[function(o,n){console.log("asdd")}],[0]);
