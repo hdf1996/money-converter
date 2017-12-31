@@ -12,9 +12,9 @@ class CurrencyList extends Component {
       <ul className="currency-list">
         {filter(CURRENCIES, item => item.name !== this.props.currentCurrency).map((item, index) =>
           <CurrencyItem key={`currency-${index}`}
-                        currencyAmount={this.props.amount}
+                        currentAmount={this.props.amount}
                         currentCurrency={this.props.currentCurrency}
-                        currencyName={item.name} />)}
+                        {...item} />)}
       </ul>
     )
   }

@@ -6,7 +6,7 @@ const CURRENCIES = [
     name: 'CLP'
   },
   {
-    name: 'USD'
+    name: 'USD',
   },
   {
     name: 'EUR'

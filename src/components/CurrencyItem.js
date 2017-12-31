@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 
 import './CurrencyItem.css'
 
+import { CURRENCIES } from '../helpers/constants'
+
+const convertCurrency = i => i*2
+
 class CurrencyItem extends Component {
   render () {
     return (
-      <li className="currency-item">
-        <h3>{this.props.currencyName}</h3>
-        <h1>{this.props.currencyAmount}</h1>
+      <li className={`currency-item currency-item-${this.props.name.toLowerCase()}`}>
+        <h3>{this.props.name}</h3>
+        <h1>{convertCurrency(this.props.currentAmount, this.props.name)}</h1>
         <div className="currency-table">
           1 {this.props.currentCurrency} x 654 {this.props.currencyName}
         </div>
@@ -17,9 +21,9 @@ class CurrencyItem extends Component {
 }
 
 CurrencyItem.defaultProps = {
-  currencyName: 'CLP',
+  name: 'CLP',
   currentCurrency: 'ARS',
-  currencyAmount: 0
+  currentAmount: 0
 }
 
 export default CurrencyItem;
