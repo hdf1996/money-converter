@@ -1,0 +1,26 @@
+.select {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 10%;
+  margin-left: 15px;
+}
+
+.select .select-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 18px;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 5px;
+  flex: 1 1 20%;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.select .select-item:hover, .select .select-item.selected {
+  background: white;
+  color: black;
+}

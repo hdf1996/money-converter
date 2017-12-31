@@ -1,0 +1,11 @@
+.amount-selector {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #485563;
+  background: -webkit-linear-gradient(to bottom, #29323c, #485563);
+  background: linear-gradient(to bottom, #29323c, #485563);
+  color: white;
+}

@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 
+import './Input.css'
+
 class Input extends Component {
   render () {
     return (
-      <input type="text" value={this.props.value} />
+      <div className="input">
+        <input type="text" value={this.props.value} />
+      </div>
     )
   }
 }
 
 Input.defaultProps = {
-  value: ''
+  value: '',
+  placeholder: ''
 }
 
 export default Input;
