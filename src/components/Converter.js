@@ -4,33 +4,31 @@ import './Converter.css'
 
 import Select from './Select'
 import Input from './Input'
+import CurrencyList from './CurrencyList'
 
-const CURRENCIES = ['ARS', 'USD', 'CLP', 'EUR']
+import { CURRENCIES } from '../helpers/constants'
+
 class Converter extends Component {
   state = { amount: 40000, currency: 'ARS' }
 
   changeCurrency = (value) => this.setState({currency: value})
+  changeAmount = (value) => this.setState({amount: value})
 
   render () {
     return (
       <div>
         <div className="amount-selector">
-          <Input value={this.state.amount}/>
-          <Select options={CURRENCIES} value={this.state.currency} onChange={this.changeCurrency}/>
+          <div className="container">
+            <Input value={this.state.amount} onChange={this.changeAmount}/>
+            <Select options={CURRENCIES} value={this.state.currency} onChange={this.changeCurrency}/>
+          </div>
         </div>
-        <div>
-          <ul>
-            <li>USD</li>
-          </ul>
+        <div className="currency-list-container">
+          <CurrencyList currentCurrency={this.state.currency} amount={this.state.amount}/>
         </div>
       </div>
     )
   }
-}
-
-Converter.defaultProps = {
-  amount: 0,
-  currency: 'ARS'
 }
 
 export default Converter;

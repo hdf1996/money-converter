@@ -8,10 +8,10 @@ class Select extends Component {
     return (
       <div className="select">
         {this.props.options.map((item, index) =>
-          <div onClick={() => this.handleChange(item)}
-               className={`select-item ${item === this.props.value && 'selected'}`}
+          <div onClick={() => this.handleChange(item.name)}
+               className={`select-item ${item.name === this.props.value && 'selected'}`}
                key={index}>
-            {item}
+            {item.name}
           </div>
         )}
       </div>
