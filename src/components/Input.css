@@ -1,0 +1,22 @@
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input input{
+  background: transparent;
+  border: 0;
+  font-size: 58px;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  min-width: 40px;
+  display: block;
+  width: 300px;
+}
+
+.input input:focus {
+  box-shadow: 0 0 0 transparent;
+  outline: none;
+}
