@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - '7'
-script:
-  - echo "Test"
 deploy:
   provider: script
   script: bash deploy.sh
   on:
     branch: travis-integration
+notifications:
+  email: falseg
