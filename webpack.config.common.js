@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const config = {
   entry: './src/index.js',
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     path: __dirname + '/dist'
   },
   plugins: [
@@ -12,7 +12,21 @@ const config = {
     new HtmlWebpackPlugin({
       title: 'Convertidor de monedas!'
     }),
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env', "react"]
+          }
+        }
+      }
+    ]
+  }
 };
 
 module.exports = config;
