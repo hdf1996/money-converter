@@ -7,7 +7,7 @@ class Input extends Component {
   render () {
     return (
       <div className="input">
-        <input type="text" value={this.props.value} onChange={this.handleChange} />
+        <input type={this.props.type} value={this.props.value} onChange={this.handleChange} />
       </div>
     )
   }
@@ -16,7 +16,8 @@ class Input extends Component {
 Input.defaultProps = {
   value: '',
   placeholder: '',
-  onChange: () => {}
+  onChange: () => {},
+  type: 'text'
 }
 
 export default Input;
