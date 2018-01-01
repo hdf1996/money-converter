@@ -10,7 +10,8 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Convertidor de monedas!'
+      title: 'Conversor de monedas!',
+      template: './src/index.html'
     }),
   ],
   module: {
