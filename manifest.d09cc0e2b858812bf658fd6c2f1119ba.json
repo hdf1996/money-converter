@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.59c7b536936bdd24e489288eb3fdb053.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.d6fd2d28050a25b86f9a8417fb00b251.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.db8bc1cc1dfb295fa1bc40a499b3b51e.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.4101d94074da9f04f33df2cdec682a29.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.ea4e09e0a110e8b409a87b9ec2ae8702.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.6bd24f909c8d9af90f49776ac851a0cd.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Money Converter",
+  "short_name": "money-converter",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "A cool money converter!",
+  "background_color": "#00c6ff"
+}
