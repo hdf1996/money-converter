@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import round from 'round-precision'
 
 import './CurrencyItem.css'
 
@@ -13,16 +14,17 @@ class CurrencyItem extends Component {
 
   handleUpdate = (props) => {
     convertCurrency(props.currentCurrency, props.currentAmount, props.name)
-      .then(response => this.setState({convertedAmount: response * props.currentAmount}))
+      .then(response => this.setState({convertedAmount: response * props.currentAmount, conversionValue: response}))
   }
 
   render () {
+    if(this.state.convertedAmount === null || this.state.conversionValue === null) return <li className={`currency-item currency-item-${this.props.name.toLowerCase()}`}>'Cargando...'</li>
     return (
       <li className={`currency-item currency-item-${this.props.name.toLowerCase()}`}>
         <h3>{this.props.name}</h3>
-        <h1>{this.state.convertedAmount}</h1>
+        <h1>{round(this.state.convertedAmount, 2)}</h1>
         <div className="currency-table">
-          1 {this.props.currentCurrency} x {this.state.conversionValuey} {this.props.currencyName}
+          1 {this.props.currentCurrency} x {this.state.conversionValue} {this.props.currencyName}
         </div>
       </li>
     )

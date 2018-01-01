@@ -8,7 +8,7 @@ const API_URL = `https://free.currencyconverterapi.com/api/v5/convert?compact=y`
 const convertCurrency = (originalCurrency, originalAmount, finalCurrency) => {
   const convertionName = `${originalCurrency}_${finalCurrency}`
   if(read(convertionName) !== null) return cachedFetch(convertionName)
-  
+
   const readValue = fetch(`${API_URL}&q=${convertionName}`)
     .then(response => response.json())
     .then(response => response[Object.keys(response)[0]].val)
