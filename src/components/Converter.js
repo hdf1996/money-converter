@@ -7,12 +7,20 @@ import Input from './Input'
 import CurrencyList from './CurrencyList'
 
 import { CURRENCIES } from '../helpers/constants'
+import { read, write } from '../helpers/localStorage'
 
 class Converter extends Component {
-  state = { amount: 19, currency: 'ARS' }
+  state = { amount: 1, currency: 'ARS' }
 
-  changeCurrency = (value) => this.setState({currency: value})
-  changeAmount = (value) => this.setState({amount: value})
+  changeCurrency = (value) => { this.setState({currency: value}); write('currency', value) }
+  changeAmount = (value) => { this.setState({amount: value}); write('amount', Math.max(value, 1)) }
+
+  componentWillMount = () => {
+    this.setState({
+      amount: read('amount', 1),
+      currency: read('currency', 'ARS')
+    })
+  }
 
   render () {
     return (
