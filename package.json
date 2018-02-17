@@ -28,7 +28,7 @@
     "workbox-webpack-plugin": "^2.1.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.development.js",
+    "start": "webpack-dev-server --open --config webpack.config.development.js --host 0.0.0.0",
     "build": "webpack --config webpack.config.production.js",
     "http": "http-server dist",
     "predeploy": "npm run build",
