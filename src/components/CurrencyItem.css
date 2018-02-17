@@ -58,3 +58,18 @@
   background: linear-gradient(to bottom, #0072ff, #00c6ff);
   color: white;
 }
+
+.currency-item-btc {
+  background: #F2994A;
+  background: -webkit-linear-gradient(to bottom, #F2C94C, #F2994A);
+  background: linear-gradient(to bottom, #F2C94C, #F2994A);
+  color: white;
+}
+
+.currency-item-brl {
+  background: #DCE35B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+}

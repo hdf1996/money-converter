@@ -15,6 +15,14 @@ const CURRENCIES = [
     name: 'EUR',
     cacheTime: 24 * 60 * 60
   },
+  {
+    name: 'BTC',
+    cacheTime: 24 * 60 * 60 // TODO: Update this to a shorter time
+  },
+  {
+    name: 'BRL',
+    cacheTime: 24 * 60 * 60
+  }
 ]
 
 export { CURRENCIES }
