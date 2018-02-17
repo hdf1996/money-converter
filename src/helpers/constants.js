@@ -1,15 +1,19 @@
 const CURRENCIES = [
   {
-    name: 'ARS'
+    name: 'ARS',
+    cacheTime: 24 * 60 * 60
   },
   {
-    name: 'CLP'
+    name: 'CLP',
+    cacheTime: 24 * 60 * 60
   },
   {
     name: 'USD',
+    cacheTime: 24 * 60 * 60
   },
   {
-    name: 'EUR'
+    name: 'EUR',
+    cacheTime: 24 * 60 * 60
   },
 ]
 

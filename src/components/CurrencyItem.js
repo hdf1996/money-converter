@@ -22,7 +22,7 @@ class CurrencyItem extends Component {
     return (
       <li className={`currency-item currency-item-${this.props.name.toLowerCase()}`}>
         <h3>{this.props.name}</h3>
-        <h1>{round(this.state.convertedAmount, 2)}</h1>
+        <h1>{round(this.state.convertedAmount, 3)}</h1>
         <div className="currency-table">
           1 {this.props.currentCurrency} x {this.state.conversionValue} {this.props.currencyName}
         </div>
