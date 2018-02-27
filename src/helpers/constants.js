@@ -16,8 +16,8 @@ const CURRENCIES = [
     cacheTime: 24 * 60 * 60
   },
   {
-    name: 'BTC',
-    cacheTime: 24 * 60 * 60 // TODO: Update this to a shorter time
+    name: 'GBP',
+    cacheTime: 24 * 60 * 60
   },
   {
     name: 'BRL',

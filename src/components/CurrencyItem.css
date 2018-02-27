@@ -59,10 +59,10 @@
   color: white;
 }
 
-.currency-item-btc {
-  background: #F2994A;
-  background: -webkit-linear-gradient(to bottom, #F2C94C, #F2994A);
-  background: linear-gradient(to bottom, #F2C94C, #F2994A);
+.currency-item-gbp {
+  background: #673AB7;
+  background: -webkit-linear-gradient(to bottom, #512DA8, #673AB7);
+  background: linear-gradient(to bottom, #512DA8, #673AB7);
   color: white;
 }
 
