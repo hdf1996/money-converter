@@ -32,6 +32,7 @@
     "build": "webpack --config webpack.config.production.js",
     "http": "http-server dist",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -a"
+    "deploy": "gh-pages -d dist -a",
+    "test": "echo 0"
   }
 }
