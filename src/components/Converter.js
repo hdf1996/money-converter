@@ -28,7 +28,7 @@ class Converter extends Component {
       <div>
         <div className={`amount-selector currency-item-${this.state.currency.toLowerCase()}`}>
           <div className="container">
-            <Input value={this.state.amount} type="text" onChange={this.changeAmount}/>
+            <Input value={this.state.amount} type="number" onChange={this.changeAmount}/>
             <Select options={CURRENCIES} value={this.state.currency} onChange={this.changeCurrency}/>
           </div>
         </div>
